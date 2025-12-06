@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anime Movies</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cinzel:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+  </style>
+</head>
+<body class="bg-black text-gray-100 font-sans">
+  <nav
+      class="bg-neutral-primary sticky top-0 w-full z-50 border-b border-default bg-blue-200"
+    >
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img
+            src="https://i.pinimg.com/736x/48/e0/3f/48e03fdf114bae61b2167be28befc84e.jpg"
+            class="h-7 rounded-full hover:scale-110 transition-transform duration-300"
+            alt="movie logo"
+          />
+          <span
+            class="self-center text-xl text-heading font-semibold whitespace-nowrap hover:text-blue-500"
+            >Anime movie</span
+          >
+        </a>
+        <div class="flex items-center md:order-2">
+          <button
+            type="button"
+            data-collapse-toggle="navbar-search"
+            aria-controls="navbar-search"
+            aria-expanded="false"
+            class="flex items-center justify-center md:hidden text-body hover:text-heading bg-transparent box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-2 focus:ring-neutral-tertiary font-medium leading-5 rounded-base text-sm w-10 h-10 focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-width="2"
+                d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+              />
+            </svg>
+            <span class="sr-only cursor-pointer">Search</span>
+          </button>
+          <label for="input-group-1" class="sr-only">Your Email</label>
+          <div class="relative hidden md:block">
+            <div
+              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-body"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="2"
+                  d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+                />
+              </svg>
+            </div>
+            <input
+              type="text"
+              id="input-group-1"
+              class="block w-full ps-9 pe-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-2.5 py-2 shadow-xs placeholder:text-body"
+              placeholder="Search"
+            />
+          </div>
+          <button
+            data-collapse-toggle="navbar-search"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
+            aria-controls="navbar-search"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-width="2"
+                d="M5 7h14M5 12h14M5 17h14"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          id="navbar-search"
+        >
+          <div class="relative mt-3 md:hidden">
+            <div
+              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-body"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="2"
+                  d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+                />
+              </svg>
+            </div>
+            <input
+              type="text"
+              id="input-group-1"
+              class="block w-full ps-9 pe-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-2.5 py-2 shadow-xs placeholder:text-body"
+              placeholder="Search"
+            />
+          </div>
+          <ul
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary"
+          >
+            <li>
+              <a
+                href="home.html"
+                class="block py-2 px-3 text-heading- bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0 hover:text-blue-500"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent hover:text-blue-500"
+                >Movies</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent hover:text-blue-500"
+                >Series</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent hover:text-blue-500"
+                >Top Rated</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent hover:text-blue-500"
+                >Genres</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent hover:text-blue-500"
+                >Upcoming</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent hover:text-blue-500"
+                >International Blog</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0">
+      <!-- Background image placeholder -->
+      <div class="h-full w-full bg-[url('https://aniwatchtv.to/images/anw-min.webp')] bg-cover bg-center"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-3xl">
+        <h1 class="font-display text-4xl sm:text-5xl font-bold tracking-tight">Stream hand-picked anime episodes, reviews, and character guides</h1>
+        <p class="mt-4 text-white/80">Explore anime galleries, season charts, and in-depth character profiles. Your next obsession starts here</p>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#" class="inline-flex items-center gap-2 rounded bg-brand-600 px-5 py-2.5 text-sm font-semibold hover:bg-brand-700 shadow-glow">
+            Explore Feature Films
+          </a>
+          <a href="#" class="inline-flex items-center gap-2 rounded border border-white/20 px-5 py-2.5 text-sm font-semibold hover:bg-white/10">
+            Download the App
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grid: Featured stories -->
+  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+    <div class="flex items-baseline justify-between">
+      <h2 class="font-display text-2xl">Latest highlights</h2>
+      <a href="#" class="text-sm text-white/70 hover:text-white">View all</a>
+    </div>
+
+    <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
+      <!-- Card 1: The Cremation -->
+      <article class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5">
+        <div class="aspect-[16/9] w-full overflow-hidden">
+          <img
+            src="https://i.pinimg.com/736x/6d/d4/0c/6dd40cd85ee4ac0d50ee46475c5798df.jpg"
+            alt="The Cremation promo"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="p-4 sm:p-5">
+          <div class="flex items-center gap-2 text-xs text-white/60">
+            <span>Myanmar Cinemas</span>
+            <span>•</span>
+            <span>True-event horror</span>
+          </div>
+          <h3 class="mt-2 font-semibold text-lg">Darkness Awaits: “The Cremation”</h3>
+          <p class="mt-1 text-white/80 text-sm">Following its phenomenal success in Cambodia, “The Cremation” is set to unleash a true horror event in Myanmar cinemas.</p>
+          <div class="mt-4 flex items-center gap-3">
+            <a href="#" class="text-sm font-semibold text-brand-600 hover:text-brand-700">Official announcement</a>
+            <a href="#" class="text-sm text-white/70 hover:text-white">Learn more</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2: The Forest -->
+      <article class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5">
+        <div class="aspect-[16/9] w-full overflow-hidden">
+          <img
+            src="https://i.pinimg.com/736x/03/44/b0/0344b02a2a011527d382e44d56c5d09b.jpg"
+            alt="The Forest promo"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="p-4 sm:p-5">
+          <div class="flex items-center gap-2 text-xs text-white/60">
+            <span>English</span>
+            <span>•</span>
+            <span>Now showing in Cambodia</span>
+          </div>
+          <h3 class="mt-2 font-semibold text-lg">The Forest — Directed by Bun Chanpich</h3>
+          <p class="mt-1 text-white/80 text-sm">An exciting new mystery-horror feature produced by Sastra Film, released nationwide in Cambodia.</p>
+          <div class="mt-4 flex items-center gap-3">
+            <a href="#" class="text-sm font-semibold text-brand-600 hover:text-brand-700">Get tickets</a>
+            <a href="#" class="text-sm text-white/70 hover:text-white">Read details</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3: A Gong (Ticket on sale) -->
+      <article class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5">
+        <div class="aspect-[16/9] w-full overflow-hidden">
+          <img
+            src="https://i.pinimg.com/1200x/5a/29/9e/5a299e0d8ce1757dcd8dc4d613ee0b08.jpg"
+            alt="A Gong tickets promo"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="p-4 sm:p-5">
+          <div class="flex items-center gap-2 text-xs text-white/60">
+            <span>English</span>
+            <span>•</span>
+            <span>Ticket on sale now</span>
+          </div>
+          <h3 class="mt-2 font-semibold text-lg">Explore the intriguing story of “A Gong”</h3>
+          <p class="mt-1 text-white/80 text-sm">After the mysterious deaths of her three sons, Teang seeks a Feng Shui expert to protect her family from an unseen force.</p>
+          <div class="mt-4 flex items-center gap-3">
+            <a href="#" class="text-sm font-semibold text-brand-600 hover:text-brand-700">Buy tickets</a>
+            <a href="#" class="text-sm text-white/70 hover:text-white">Synopsis</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4: A Gong (Cambodia release) -->
+      <article class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5">
+        <div class="aspect-[16/9] w-full overflow-hidden">
+          <img
+            src="https://i.pinimg.com/736x/a8/03/85/a80385127e2bdb7102a2d1d5ecf43656.jpg"
+            alt="A Gong Cambodia release"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="p-4 sm:p-5">
+          <div class="flex items-center gap-2 text-xs text-white/60">
+            <span>English</span>
+            <span>•</span>
+            <span>Cambodia release</span>
+          </div>
+          <h3 class="mt-2 font-semibold text-lg">“A Gong” — New feature film release</h3>
+          <p class="mt-1 text-white/80 text-sm">Ready for a real horror adventure that pushes storytelling to new heights? Experience the highly anticipated “A Gong”.</p>
+          <div class="mt-4 flex items-center gap-3">
+            <a href="#" class="text-sm font-semibold text-brand-600 hover:text-brand-700">Get tickets</a>
+            <a href="#" class="text-sm text-white/70 hover:text-white">Trailer</a>
+          </div>
+        </div>
+      </article>
+       <article class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5">
+        <div class="aspect-[16/9] w-full overflow-hidden">
+          <img
+            src="https://i.pinimg.com/1200x/84/c6/86/84c6864a1639fbf8b71428faa3ad548e.jpg"
+            alt="A Gong tickets promo"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="p-4 sm:p-5">
+          <div class="flex items-center gap-2 text-xs text-white/60">
+            <span>English</span>
+            <span>•</span>
+            <span>Ticket on sale now</span>
+          </div>
+          <h3 class="mt-2 font-semibold text-lg">Explore the intriguing story of “A Gong”</h3>
+          <p class="mt-1 text-white/80 text-sm">After the mysterious deaths of her three sons, Teang seeks a Feng Shui expert to protect her family from an unseen force.</p>
+          <div class="mt-4 flex items-center gap-3">
+            <a href="#" class="text-sm font-semibold text-brand-600 hover:text-brand-700">Buy tickets</a>
+            <a href="#" class="text-sm text-white/70 hover:text-white">Synopsis</a>
+          </div>
+        </div>
+      </article>
+       <article class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5">
+        <div class="aspect-[16/9] w-full overflow-hidden">
+          <img
+            src="https://i.pinimg.com/736x/3c/10/2b/3c102b0a7247ce25ce765ea82a8cd783.jpg"
+            alt="A Gong tickets promo"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="p-4 sm:p-5">
+          <div class="flex items-center gap-2 text-xs text-white/60">
+            <span>English</span>
+            <span>•</span>
+            <span>Ticket on sale now</span>
+          </div>
+          <h3 class="mt-2 font-semibold text-lg">Explore the intriguing story of “A Gong”</h3>
+          <p class="mt-1 text-white/80 text-sm">After the mysterious deaths of her three sons, Teang seeks a Feng Shui expert to protect her family from an unseen force.</p>
+          <div class="mt-4 flex items-center gap-3">
+            <a href="#" class="text-sm font-semibold text-brand-600 hover:text-brand-700">Buy tickets</a>
+            <a href="#" class="text-sm text-white/70 hover:text-white">Synopsis</a>
+          </div>
+        </div>
+      </article>
+      
+    </div>
+
+    <!-- CTA band -->
+    <div class="mt-12 overflow-hidden rounded-xl border border-white/10 bg-gradient-to-r from-brand-700 to-brand-600 p-6 sm:p-8">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+        <div>
+          <h3 class="font-display text-xl">Dramatic battle scene with glowing swords</h3>
+          <p class="mt-1 text-white/90 text-sm">Download the Anime Film app for exclusive content, behind-the-scenes, and early ticket access.</p>
+        </div>
+        <div class="flex gap-3">
+          <a href="#" class="inline-flex items-center rounded bg-black/50 px-5 py-2.5 text-sm font-semibold hover:bg-black/70">Get the app</a>
+          <a href="#" class="inline-flex items-center rounded bg-white/15 px-5 py-2.5 text-sm font-semibold hover:bg-white/25">Contact</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-16 border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div>
+          <div class="font-display text-lg">Anime Film</div>
+          <p class="mt-2 text-sm text-white/70">Explore anime galleries, season charts, and in-depth character profiles. Your next obsession starts here</p>
+        </div>
+        <div>
+          <div class="text-sm font-semibold">Explore</div>
+          <ul class="mt-2 space-y-2 text-sm text-white/70">
+            <li><a href="#" class="hover:text-white">Feature Films</a></li>
+            <li><a href="#" class="hover:text-white">More Projects</a></li>
+            <li><a href="#" class="hover:text-white">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-sm font-semibold">Support</div>
+          <ul class="mt-2 space-y-2 text-sm text-white/70">
+            <li><a href="#" class="hover:text-white">Contact</a></li>
+            <li><a href="#" class="hover:text-white">Press</a></li>
+            <li><a href="#" class="hover:text-white">FAQs</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-sm font-semibold">Follow</div>
+          <ul class="mt-2 space-y-2 text-sm text-white/70">
+            <li><a href="#" class="hover:text-white">Facebook</a></li>
+            <li><a href="#" class="hover:text-white">YouTube</a></li>
+            <li><a href="#" class="hover:text-white">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 text-xs text-white/50">&copy; <span id="year"></span> Group2 Anime. All rights reserved.<br>Team Member : SOKNY ENAT-THERM CHANTHA-LEY SEN- MI SORAKMONY-BUN PANIN-THY MAYA</div>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
