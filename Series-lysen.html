@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="https://i.pinimg.com/736x/48/e0/3f/48e03fdf114bae61b2167be28befc84e.jpg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Top Series</title>
     <style>
       * {
@@ -13,32 +15,26 @@
 
       body {
         background: #0f0f0f;
-        color: white;
-        font-family: Arial, sans-serif;
-        
       }
 
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
+
 
       h1 {
         color: #ff4757;
         text-align: center;
         margin-bottom: 30px;
+        margin-top: 20px;
         font-size: 36px;
       }
 
       h2 {
         color: #ff4757;
-        margin: 40px 0 20px 0;
+        margin: 60px 0 30px 0;
         font-size: 28px;
         border-bottom: 2px solid #ff4757;
         padding-bottom: 10px;
       }
 
-      /* Section 1: 4x4 Grid */
       .anime-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -64,7 +60,6 @@
         }
       }
 
-      /* Section 2: 4x1 Grid (Vertical Stack) */
       .vertical-grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -73,7 +68,6 @@
         margin: 0 auto 50px auto;
       }
 
-      /* Common Card Styles */
       .anime-card {
         background: #1a1a1a;
         border-radius: 10px;
@@ -85,7 +79,6 @@
         transform: translateY(-5px);
       }
 
-      /* Grid Cards (4x4) */
       .grid-card .anime-image {
         width: 100%;
         height: 250px;
@@ -96,7 +89,6 @@
         padding: 15px;
       }
 
-      /* Vertical Cards (4x1) */
       .vertical-card {
         display: flex;
         align-items: center;
@@ -118,7 +110,6 @@
         flex-grow: 1;
       }
 
-      /* Responsive for vertical cards */
       @media (max-width: 768px) {
         .vertical-card {
           flex-direction: column;
@@ -130,7 +121,6 @@
         }
       }
 
-      /* Common Content Styles */
       .anime-title {
         font-size: 18px;
         margin-bottom: 10px;
@@ -155,7 +145,6 @@
         margin-bottom: 20px;
       }
 
-      /* Button Styles */
       .watch-btn {
         display: block;
         width: 100%;
@@ -203,7 +192,6 @@
         margin-right: 8px;
       }
 
-      /* Status Badges */
       .status {
         padding: 3px 8px;
         border-radius: 3px;
@@ -226,381 +214,161 @@
         color: white;
       }
     </style>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="./dist/output.css" />
   </head>
-  <body>
+  <body style="margin: 0; padding: 0; overflow-x: hidden;">
     <!-- Navbar -->
-    <nav
-      class="bg-neutral-primary sticky top-0 w-full z-50 border-b border-default bg-blue-200"
-    >
-      <div
-        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
-      >
+    <nav class="bg-blue-200 sticky top-0 w-full z-50 border-b border-gray-300">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img
-            src="https://i.pinimg.com/736x/48/e0/3f/48e03fdf114bae61b2167be28befc84e.jpg"
-            class="h-7 rounded-full hover:scale-110 transition-transform duration-300"
-            alt="movie logo"
-          />
-          <span
-            class="self-center text-xl text-heading font-semibold whitespace-nowrap hover:text-blue-500"
-            >Anime movie</span
-          >
+          <img src="https://i.pinimg.com/736x/48/e0/3f/48e03fdf114bae61b2167be28befc84e.jpg" class="h-7 rounded-full hover:scale-110 transition-transform duration-300" alt="movie logo" />
+          <span class="self-center text-xl text-gray-800 font-semibold whitespace-nowrap hover:text-blue-500">Anime movie</span>
         </a>
         <div class="flex items-center md:order-2">
-          <button
-            type="button"
-            data-collapse-toggle="navbar-search"
-            aria-controls="navbar-search"
-            aria-expanded="false"
-            class="flex items-center justify-center md:hidden text-body hover:text-heading bg-transparent box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-2 focus:ring-neutral-tertiary font-medium leading-5 rounded-base text-sm w-10 h-10 focus:outline-none"
-          >
-            <svg
-              class="w-6 h-6"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-width="2"
-                d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
-              />
+          <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="flex items-center justify-center md:hidden text-gray-600 hover:text-gray-800 bg-transparent box-border border border-transparent hover:bg-gray-100 focus:ring-2 focus:ring-gray-300 font-medium leading-5 rounded-lg text-sm w-10 h-10 focus:outline-none">
+            <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" />
             </svg>
             <span class="sr-only cursor-pointer">Search</span>
           </button>
           <label for="input-group-1" class="sr-only">Your Email</label>
           <div class="relative hidden md:block">
-            <div
-              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
-            >
-              <svg
-                class="w-4 h-4 text-body"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-width="2"
-                  d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
-                />
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+              <svg class="w-4 h-4 text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" />
               </svg>
             </div>
-            <input
-              type="text"
-              id="input-group-1"
-              class="block w-full ps-9 pe-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-2.5 py-2 shadow-xs placeholder:text-body"
-              placeholder="Search"
-            />
+            <input type="text" id="input-group-1" class="block w-full ps-9 pe-3 py-2.5 bg-gray-50 border border-gray-300 text-gray-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 px-2.5 py-2 shadow-sm placeholder:text-gray-500" placeholder="Search" />
           </div>
-          <button
-            data-collapse-toggle="navbar-search"
-            type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
-            aria-controls="navbar-search"
-            aria-expanded="false"
-          >
+          <button data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-600 rounded-lg md:hidden hover:bg-gray-100 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-300" aria-controls="navbar-search" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
-            <svg
-              class="w-6 h-6"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-width="2"
-                d="M5 7h14M5 12h14M5 17h14"
-              />
+            <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14" />
             </svg>
           </button>
         </div>
-        <div
-          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-          id="navbar-search"
-        >
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
           <div class="relative mt-3 md:hidden">
-            <div
-              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
-            >
-              <svg
-                class="w-4 h-4 text-body"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-width="2"
-                  d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
-                />
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+              <svg class="w-4 h-4 text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" />
               </svg>
             </div>
-            <input
-              type="text"
-              id="input-group-1"
-              class="block w-full ps-9 pe-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-2.5 py-2 shadow-xs placeholder:text-body"
-              placeholder="Search"
-            />
+            <input type="text" id="input-group-1" class="block w-full ps-9 pe-3 py-2.5 bg-gray-50 border border-gray-300 text-gray-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 px-2.5 py-2 shadow-sm placeholder:text-gray-500" placeholder="Search" />
           </div>
-          <ul
-            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary"
-          >
-            <li>
-              <a
-                href="home-page.html"
-                class="block py-2 px-3 text-heading- bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0 hover:text-blue-500"
-                aria-current="page"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent hover:text-blue-500"
-                >Movies</a
-              >
-            </li>
-            <li>
-              <a
-                href="Series-lysen.html"
-                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent hover:text-blue-500"
-                >Series</a
-              >
-            </li>
-            <li>
-              <a
-                href="top-mony.html"
-                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent hover:text-blue-500"
-                >Top Rated</a
-              >
-            </li>
-            <li>
-              <a
-                href="Genres.html"
-                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent hover:text-blue-500"
-                >Genres</a
-              >
-            </li>
-            <li>
-              <a
-                href="upcoming-panin.html"
-                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent hover:text-blue-500"
-                >Upcoming</a
-              >
-            </li>
+          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-200 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-blue-200">
+            <li><a href="home.html" class="block py-2 px-3 text-gray-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 hover:text-blue-500">Home</a></li>
+            <li><a href="home-page.html" class="block py-2 px-3 text-gray-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 hover:text-blue-500">Movies</a></li>
+            <li><a href="Series-lysen.html" class="block py-2 px-3 text-gray-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 hover:text-blue-500">Series</a></li>
+            <li><a href="top-mony.html" class="block py-2 px-3 text-gray-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 hover:text-blue-500">Top Rated</a></li>
+            <li><a href="Genres.html" class="block py-2 px-3 text-gray-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 hover:text-blue-500">Genres</a></li>
+            <li><a href="upcoming-panin.html" class="block py-2 px-3 text-gray-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 hover:text-blue-500">Upcoming</a></li>
+            <li><a href="blog.html" class="block py-2 px-3 text-gray-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 hover:text-blue-500">International Blog</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="container">
+
+    <div class="max-w-7xl mx-auto px-4 py-8">
       <h1>Top Series</h1>
 
       <!-- Section 1: 4x4 Grid -->
       <h2>Popular Anime</h2>
       <div class="anime-grid">
-        <!-- Anime 1: One Piece -->
         <div class="anime-card grid-card">
-          <img
-            src="https://cdn.myanimelist.net/images/anime/6/73245.jpg"
-            alt="One Piece"
-            class="anime-image"
-          />
+          <img src="https://cdn.myanimelist.net/images/anime/6/73245.jpg" alt="One Piece" class="anime-image" />
           <div class="anime-info">
             <h3 class="anime-title">One Piece</h3>
             <div class="anime-meta">
               <span>1100+ Episodes</span>
               <span class="status ongoing">Ongoing</span>
             </div>
-            <a
-              href="https://www.youtube.com/watch?v=FtutLA63Cp8"
-              target="_blank"
-              class="watch-btn"
-            >
-              <i class="fas fa-play"></i> Watch Episode 1
-            </a>
+            <a href="https://www.youtube.com/watch?v=FtutLA63Cp8" target="_blank" class="watch-btn"><i class="fas fa-play"></i> Watch Episode 1</a>
           </div>
         </div>
 
-        <!-- Anime 2: Demon Slayer -->
         <div class="anime-card grid-card">
-          <img
-            src="https://cdn.myanimelist.net/images/anime/1286/99889.jpg"
-            alt="Demon Slayer"
-            class="anime-image"
-          />
+          <img src="https://cdn.myanimelist.net/images/anime/1286/99889.jpg" alt="Demon Slayer" class="anime-image" />
           <div class="anime-info">
             <h3 class="anime-title">Demon Slayer</h3>
             <div class="anime-meta">
               <span>55 Episodes</span>
               <span class="status completed">Completed</span>
             </div>
-            <a
-              href="https://www.youtube.com/watch?v=VQGCKyvzIM4"
-              target="_blank"
-              class="watch-btn"
-            >
-              <i class="fas fa-play"></i> Watch Episode 1
-            </a>
+            <a href="https://www.youtube.com/watch?v=VQGCKyvzIM4" target="_blank" class="watch-btn"><i class="fas fa-play"></i> Watch Episode 1</a>
           </div>
         </div>
 
-        <!-- Anime 3: Jujutsu Kaisen -->
         <div class="anime-card grid-card">
-          <img
-            src="https://cdn.myanimelist.net/images/anime/1171/109222.jpg"
-            alt="Jujutsu Kaisen"
-            class="anime-image"
-          />
+          <img src="https://cdn.myanimelist.net/images/anime/1171/109222.jpg" alt="Jujutsu Kaisen" class="anime-image" />
           <div class="anime-info">
             <h3 class="anime-title">Jujutsu Kaisen</h3>
             <div class="anime-meta">
               <span>47 Episodes</span>
               <span class="status ongoing">Ongoing</span>
             </div>
-            <a
-              href="https://www.youtube.com/watch?v=ynrPZQo9qYc"
-              target="_blank"
-              class="watch-btn"
-            >
-              <i class="fas fa-play"></i> Watch Episode 1
-            </a>
+            <a href="https://www.youtube.com/watch?v=ynrPZQo9qYc" target="_blank" class="watch-btn"><i class="fas fa-play"></i> Watch Episode 1</a>
           </div>
         </div>
 
-        <!-- Anime 4: Attack on Titan -->
         <div class="anime-card grid-card">
-          <img
-            src="https://cdn.myanimelist.net/images/anime/10/47347.jpg"
-            alt="Attack on Titan"
-            class="anime-image"
-          />
+          <img src="https://cdn.myanimelist.net/images/anime/10/47347.jpg" alt="Attack on Titan" class="anime-image" />
           <div class="anime-info">
             <h3 class="anime-title">Attack on Titan</h3>
             <div class="anime-meta">
               <span>94 Episodes</span>
               <span class="status completed">Completed</span>
             </div>
-            <a
-              href="https://www.youtube.com/watch?v=KKzmOh4SuBc"
-              target="_blank"
-              class="watch-btn"
-            >
-              <i class="fas fa-play"></i> Watch Episode 1
-            </a>
+            <a href="https://www.youtube.com/watch?v=KKzmOh4SuBc" target="_blank" class="watch-btn"><i class="fas fa-play"></i> Watch Episode 1</a>
           </div>
         </div>
 
-        <!-- Anime 5: My Hero Academia -->
         <div class="anime-card grid-card">
-          <img
-            src="https://cdn.myanimelist.net/images/anime/10/78745.jpg"
-            alt="My Hero Academia"
-            class="anime-image"
-          />
+          <img src="https://cdn.myanimelist.net/images/anime/10/78745.jpg" alt="My Hero Academia" class="anime-image" />
           <div class="anime-info">
             <h3 class="anime-title">My Hero Academia</h3>
             <div class="anime-meta">
               <span>138 Episodes</span>
               <span class="status ongoing">Ongoing</span>
             </div>
-            <a
-              href="https://www.youtube.com/watch?v=EPVkcwyLIQQ"
-              target="_blank"
-              class="watch-btn"
-            >
-              <i class="fas fa-play"></i> Watch Episode 1
-            </a>
+            <a href="https://www.youtube.com/watch?v=EPVkcwyLIQQ" target="_blank" class="watch-btn"><i class="fas fa-play"></i> Watch Episode 1</a>
           </div>
         </div>
 
-        <!-- Anime 6: Chainsaw Man -->
         <div class="anime-card grid-card">
-          <img
-            src="https://cdn.myanimelist.net/images/anime/1806/126216.jpg"
-            alt="Chainsaw Man"
-            class="anime-image"
-          />
+          <img src="https://cdn.myanimelist.net/images/anime/1806/126216.jpg" alt="Chainsaw Man" class="anime-image" />
           <div class="anime-info">
             <h3 class="anime-title">Chainsaw Man</h3>
             <div class="anime-meta">
               <span>12 Episodes</span>
               <span class="status completed">Completed</span>
             </div>
-            <a
-              href="https://www.youtube.com/watch?v=eyonP1Vcpmg"
-              target="_blank"
-              class="watch-btn"
-            >
-              <i class="fas fa-play"></i> Watch Episode 1
-            </a>
+            <a href="https://www.youtube.com/watch?v=eyonP1Vcpmg" target="_blank" class="watch-btn"><i class="fas fa-play"></i> Watch Episode 1</a>
           </div>
         </div>
 
-        <!-- Anime 7: Spy x Family -->
         <div class="anime-card grid-card">
-          <img
-            src="https://cdn.myanimelist.net/images/anime/1441/122795.jpg"
-            alt="Spy x Family"
-            class="anime-image"
-          />
+          <img src="https://cdn.myanimelist.net/images/anime/1441/122795.jpg" alt="Spy x Family" class="anime-image" />
           <div class="anime-info">
             <h3 class="anime-title">Spy x Family</h3>
             <div class="anime-meta">
               <span>37 Episodes</span>
               <span class="status ongoing">Ongoing</span>
             </div>
-            <a
-              href="https://www.youtube.com/watch?v=5IQUTkRxD68"
-              target="_blank"
-              class="watch-btn"
-            >
-              <i class="fas fa-play"></i> Watch Episode 1
-            </a>
+            <a href="https://www.youtube.com/watch?v=5IQUTkRxD68" target="_blank" class="watch-btn"><i class="fas fa-play"></i> Watch Episode 1</a>
           </div>
         </div>
 
-        <!-- Anime 8: Naruto -->
         <div class="anime-card grid-card">
-          <img
-            src="https://cdn.myanimelist.net/images/anime/13/17405.jpg"
-            alt="Naruto"
-            class="anime-image"
-          />
+          <img src="https://cdn.myanimelist.net/images/anime/13/17405.jpg" alt="Naruto" class="anime-image" />
           <div class="anime-info">
             <h3 class="anime-title">Naruto</h3>
             <div class="anime-meta">
               <span>220 Episodes</span>
               <span class="status completed">Completed</span>
             </div>
-            <a
-              href="https://www.youtube.com/watch?v=-G9BqkgZXRA"
-              target="_blank"
-              class="watch-btn"
-            >
-              <i class="fas fa-play"></i> Watch Episode 1
-            </a>
+            <a href="https://www.youtube.com/watch?v=-G9BqkgZXRA" target="_blank" class="watch-btn"><i class="fas fa-play"></i> Watch Episode 1</a>
           </div>
         </div>
       </div>
@@ -608,167 +376,114 @@
       <!-- Section 2: 4x1 Grid (Vertical Stack) -->
       <h2>Featured Anime</h2>
       <div class="vertical-grid">
-        <!-- Row 1: Naruto -->
         <div class="anime-card vertical-card">
-          <img
-            src="https://cdn.myanimelist.net/images/anime/13/17405.jpg"
-            alt="Naruto"
-            class="anime-image"
-          />
+          <img src="https://cdn.myanimelist.net/images/anime/13/17405.jpg" alt="Naruto" class="anime-image" />
           <div class="anime-info">
             <h3 class="anime-title">Naruto</h3>
             <p class="anime-episodes">Episode 1 - Enter: Naruto Uzumaki!</p>
-            <a
-              href="https://www.youtube.com/watch?v=-G9BqkgZXRA"
-              target="_blank"
-              class="youtube-btn"
-            >
-              <i class="fab fa-youtube"></i> Watch Episode 1 on YouTube
-            </a>
+            <a href="https://www.youtube.com/watch?v=-G9BqkgZXRA" target="_blank" class="youtube-btn"><i class="fab fa-youtube"></i> Watch Episode 1 on YouTube</a>
           </div>
         </div>
 
-        <!-- Row 2: One Piece -->
         <div class="anime-card vertical-card">
-          <img
-            src="https://cdn.myanimelist.net/images/anime/6/73245.jpg"
-            alt="One Piece"
-            class="anime-image"
-          />
+          <img src="https://cdn.myanimelist.net/images/anime/6/73245.jpg" alt="One Piece" class="anime-image" />
           <div class="anime-info">
             <h3 class="anime-title">One Piece</h3>
             <p class="anime-episodes">Episode 1 - Romance Dawn</p>
-            <a
-              href="https://www.youtube.com/watch?v=FtutLA63Cp8"
-              target="_blank"
-              class="youtube-btn"
-            >
-              <i class="fab fa-youtube"></i> Watch Episode 1 on YouTube
-            </a>
+            <a href="https://www.youtube.com/watch?v=FtutLA63Cp8" target="_blank" class="youtube-btn"><i class="fab fa-youtube"></i> Watch Episode 1 on YouTube</a>
           </div>
         </div>
 
-        <!-- Row 3: Demon Slayer -->
         <div class="anime-card vertical-card">
-          <img
-            src="https://cdn.myanimelist.net/images/anime/1286/99889.jpg"
-            alt="Demon Slayer"
-            class="anime-image"
-          />
+          <img src="https://cdn.myanimelist.net/images/anime/1286/99889.jpg" alt="Demon Slayer" class="anime-image" />
           <div class="anime-info">
             <h3 class="anime-title">Demon Slayer</h3>
             <p class="anime-episodes">Episode 1 - Cruelty</p>
-            <a
-              href="https://www.youtube.com/watch?v=VQGCKyvzIM4"
-              target="_blank"
-              class="youtube-btn"
-            >
-              <i class="fab fa-youtube"></i> Watch Episode 1 on YouTube
-            </a>
+            <a href="https://www.youtube.com/watch?v=VQGCKyvzIM4" target="_blank" class="youtube-btn"><i class="fab fa-youtube"></i> Watch Episode 1 on YouTube</a>
           </div>
         </div>
 
-        <!-- Row 4: Jujutsu Kaisen -->
         <div class="anime-card vertical-card">
-          <img
-            src="https://cdn.myanimelist.net/images/anime/1171/109222.jpg"
-            alt="Jujutsu Kaisen"
-            class="anime-image"
-          />
+          <img src="https://cdn.myanimelist.net/images/anime/1171/109222.jpg" alt="Jujutsu Kaisen" class="anime-image" />
           <div class="anime-info">
             <h3 class="anime-title">Jujutsu Kaisen</h3>
             <p class="anime-episodes">Episode 1 - Ryomen Sukuna</p>
-            <a
-              href="https://www.youtube.com/watch?v=ynrPZQo9qYc"
-              target="_blank"
-              class="youtube-btn"
-            >
-              <i class="fab fa-youtube"></i> Watch Episode 1 on YouTube
-            </a>
+            <a href="https://www.youtube.com/watch?v=ynrPZQo9qYc" target="_blank" class="youtube-btn"><i class="fab fa-youtube"></i> Watch Episode 1 on YouTube</a>
           </div>
         </div>
       </div>
     </div>
 
     <script>
-      // Click tracking for all buttons
-      document
-        .querySelectorAll(".watch-btn, .youtube-btn")
-        .forEach((button) => {
-          button.addEventListener("click", function (e) {
-            const animeTitle =
-              this.closest(".anime-info").querySelector(
-                ".anime-title"
-              ).textContent;
-            console.log(`Opening: ${animeTitle}`);
-
-            // Optional: Show loading or confirmation
-            const buttonText = this.textContent;
-            const originalText = buttonText;
-            this.innerHTML =
-              '<i class="fas fa-spinner fa-spin"></i> Loading...';
-
-            setTimeout(() => {
-              this.innerHTML = originalText;
-            }, 1000);
-          });
+      document.querySelectorAll(".watch-btn, .youtube-btn").forEach((button) => {
+        button.addEventListener("click", function (e) {
+          const animeTitle = this.closest(".anime-info").querySelector(".anime-title").textContent;
+          console.log(`Opening: ${animeTitle}`);
+          const buttonText = this.textContent;
+          const originalText = buttonText;
+          this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
+          setTimeout(() => {
+            this.innerHTML = originalText;
+          }, 1000);
         });
+      });
 
-      // Add hover effects for cards
       document.querySelectorAll(".anime-card").forEach((card) => {
         card.addEventListener("mouseenter", function () {
           this.style.boxShadow = "0 10px 20px rgba(255, 71, 87, 0.2)";
         });
-
         card.addEventListener("mouseleave", function () {
           this.style.boxShadow = "none";
         });
       });
     </script>
+
+    <!-- Footer -->
+    <footer class="mt-16 border-t border-white/10">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div>
+            <div class="font-display text-lg">Anime Film</div>
+            <p class="mt-2 text-sm text-white/70">Explore anime galleries, season charts, and in-depth character profiles. Your next obsession starts here</p>
+          </div>
+          <div>
+            <div class="text-sm font-semibold">Explore</div>
+            <ul class="mt-2 space-y-2 text-sm text-white/70">
+              <li><a href="#" class="hover:text-white">Feature Films</a></li>
+              <li><a href="#" class="hover:text-white">More Projects</a></li>
+              <li><a href="#" class="hover:text-white">Blog</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="text-sm font-semibold">Support</div>
+            <ul class="mt-2 space-y-2 text-sm text-white/70">
+              <li><a href="#" class="hover:text-white">Contact</a></li>
+              <li><a href="#" class="hover:text-white">Press</a></li>
+              <li><a href="#" class="hover:text-white">FAQs</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="text-sm font-semibold">Follow</div>
+            <ul class="mt-2 space-y-2 text-sm text-white/70">
+              <li><a href="#" class="hover:text-white">Facebook</a></li>
+              <li><a href="#" class="hover:text-white">YouTube</a></li>
+              <li><a href="#" class="hover:text-white">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 text-xs text-white/50">&copy; <span id="year"></span> Group2 Anime. All rights reserved.<br>Team Member : SOKNY ENAT-THERM CHANTHA-LEY SEN- MI SORAKMONY-BUN PANIN-THY MAYA</div>
+      </div>
+    </footer>
+
+    <script>
+      const currentPage = window.location.pathname.split('/').pop() || 'home.html';
+      document.querySelectorAll('nav a[href]').forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+          link.className = 'block py-2 px-3 text-gray-800 bg-blue-500 rounded md:bg-transparent md:text-blue-600 md:p-0 hover:text-blue-500';
+        }
+      });
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
   </body>
-  <footer class="minimal-footer">
-    <div class="footer-container">
-      <p>© 2024 Anime Movies Website. Watch anime online for free.</p>
-      <p class="small-text">This site is for demonstration purposes only.</p>
-    </div>
-  </footer>
-
-  <style>
-    .minimal-footer {
-      background: #1a1a1a;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      margin-top: 50px;
-      border-top: 1px solid #ff4757;
-    }
-
-    .footer-container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .minimal-footer p {
-      color: #aaa;
-      margin-bottom: 5px;
-    }
-
-    .small-text {
-      font-size: 12px;
-      color: #666;
-    }
-  </style>
-  <!-- Scripts -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: "#ff0000",
-          },
-        },
-      },
-    };
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
 </html>

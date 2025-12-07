@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/output.css" />
+    <title>Document</title>
+  </head>
+  <body style="margin: 0; padding: 0; overflow-x: hidden;">
+    <!-- Navbar -->
+     <nav
+      class="bg-neutral-primary sticky top-0 w-full z-50 border-b border-default bg-blue-200"
+    >
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img
+            src="https://i.pinimg.com/736x/48/e0/3f/48e03fdf114bae61b2167be28befc84e.jpg"
+            class="h-7 rounded-full hover:scale-110 transition-transform duration-300"
+            alt="movie logo"
+          />
+          <span
+            class="self-center text-xl text-heading font-semibold whitespace-nowrap hover:text-blue-500"
+            >Anime movie</span
+          >
+        </a>
+        <div class="flex items-center md:order-2">
+          <button
+            type="button"
+            data-collapse-toggle="navbar-search"
+            aria-controls="navbar-search"
+            aria-expanded="false"
+            class="flex items-center justify-center md:hidden text-body hover:text-heading bg-transparent box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-2 focus:ring-neutral-tertiary font-medium leading-5 rounded-base text-sm w-10 h-10 focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-width="2"
+                d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+              />
+            </svg>
+            <span class="sr-only cursor-pointer">Search</span>
+          </button>
+          <label for="input-group-1" class="sr-only">Your Email</label>
+          <div class="relative hidden md:block">
+            <div
+              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-body"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="2"
+                  d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+                />
+              </svg>
+            </div>
+            <input
+              type="text"
+              id="input-group-1"
+              class="block w-full ps-9 pe-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-2.5 py-2 shadow-xs placeholder:text-body"
+              placeholder="Search"
+            />
+          </div>
+          <button
+            data-collapse-toggle="navbar-search"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
+            aria-controls="navbar-search"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-width="2"
+                d="M5 7h14M5 12h14M5 17h14"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          id="navbar-search"
+        >
+          <div class="relative mt-3 md:hidden">
+            <div
+              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-body"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="2"
+                  d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+                />
+              </svg>
+            </div>
+            <input
+              type="text"
+              id="input-group-1"
+              class="block w-full ps-9 pe-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-2.5 py-2 shadow-xs placeholder:text-body"
+              placeholder="Search"
+            />
+          </div>
+          <ul
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary"
+          >
+            <li><a href="home.html" class="block py-2 px-3 text-gray-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 hover:text-blue-500">Home</a></li>
+            <li><a href="home-page.html" class="block py-2 px-3 text-gray-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 hover:text-blue-500">Movies</a></li>
+            <li><a href="Series-lysen.html" class="block py-2 px-3 text-gray-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 hover:text-blue-500">Series</a></li>
+            <li><a href="top-mony.html" class="block py-2 px-3 text-gray-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 hover:text-blue-500">Top Rated</a></li>
+            <li><a href="Genres.html" class="block py-2 px-3 text-gray-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 hover:text-blue-500">Genres</a></li>
+            <li><a href="upcoming-panin.html" class="block py-2 px-3 text-gray-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 hover:text-blue-500">Upcoming</a></li>
+            <li><a href="blog.html" class="block py-2 px-3 text-gray-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 hover:text-blue-500">International Blog</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero section -->
+    <body class="bg-white">
+      <!-- Reduced top space -->
+      <section class="py-0 px-0 top-0">
+        <div class="container mx-auto max-w-7xl">
+          <!-- Section Header (reduced spacing) -->
+          <div class="text-center max-w-3xl mx-auto mb-8">
+            <h2
+              class="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
+            >
+              Trending
+            </h2>
+
+            <div
+              class="h-1 w-20 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto mb-4 rounded-full"
+            ></div>
+          </div>
+
+          <!-- Team Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Poster 1 -->
+            <div class="group">
+              <div class="relative overflow-hidden rounded-xl mb-4">
+                <img
+                  src="https://i.pinimg.com/736x/b9/ef/0a/b9ef0ae3b860fd287e907491fddd560c.jpg"
+                  alt="poster 1"
+                  class="w-full aspect-[3/4] object-cover object-center transform group-hover:scale-105 transition duration-300 ease-in-out"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6"
+                >
+                  <div class="flex space-x-4">
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fas fa-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <h3 class="text-xl font-bold text-gray-800">Hunter x Hunter</h3>
+                <p class="text-gray-600 mt-2">
+                  Gon and friends face dangerous enemies in Phantom Rouge and
+                  The Last Mission.
+                </p>
+              </div>
+            </div>
+
+            <!-- Poster 2 -->
+            <div class="group">
+              <div class="relative overflow-hidden rounded-xl mb-4">
+                <img
+                  src="https://i.pinimg.com/1200x/6f/62/52/6f6252b40995b5b4bc09e275aa86426d.jpg"
+                  alt="poster 2"
+                  class="w-full aspect-[3/4] object-cover object-center transform group-hover:scale-105 transition duration-300 ease-in-out"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6"
+                >
+                  <div class="flex space-x-4">
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fas fa-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <h3 class="text-xl font-bold text-gray-800">Jujustu Kaisen</h3>
+                <p class="text-gray-600 mt-2">
+                  Juji Itadori gains cursed powers and joins sorcerers to fight
+                  evil curses.
+                </p>
+              </div>
+            </div>
+
+            <!-- Poster 3 -->
+            <div class="group">
+              <div class="relative overflow-hidden rounded-xl mb-4">
+                <img
+                  src="https://i.pinimg.com/736x/04/8a/fc/048afcc1d1f6b331a63357c6c7fee96d.jpg"
+                  alt="poster 3"
+                  class="w-full aspect-[3/4] object-cover object-center transform group-hover:scale-105 transition duration-300 ease-in-out"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6"
+                >
+                  <div class="flex space-x-4">
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fas fa-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <h3 class="text-xl font-bold text-gray-800">Death Note</h3>
+                <p class="text-gray-600 mt-2">
+                  Light Yagami discovers a notebook that allows him to kill
+                  anyone by writing their name in it.
+                </p>
+              </div>
+            </div>
+
+            <!-- Poster 4 -->
+            <div class="group">
+              <div class="relative overflow-hidden rounded-xl mb-4">
+                <img
+                  src="https://i.pinimg.com/736x/76/bd/2b/76bd2be78376e8401abab22aedd62f29.jpg"
+                  alt="poster 4"
+                  class="w-full aspect-[3/4] object-cover object-center transform group-hover:scale-105 transition duration-300 ease-in-out"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6"
+                >
+                  <div class="flex space-x-4">
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fas fa-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <h3 class="text-xl font-bold text-gray-800">Parasyte</h3>
+                <p class="text-gray-600 mt-2">
+                  Shini Izumi is infected by a parasitic alien that takes over
+                  his right hand.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Row -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12"
+          >
+            <!-- Poster 5 -->
+            <div class="group">
+              <div class="relative overflow-hidden rounded-xl mb-4">
+                <img
+                  src="https://i.pinimg.com/736x/9e/1a/33/9e1a335284c97faa86a0737904ee1b11.jpg"
+                  alt="poster 5"
+                  class="w-full aspect-[3/4] object-cover object-center transform group-hover:scale-105 transition duration-300 ease-in-out"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6"
+                >
+                  <div class="flex space-x-4">
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fas fa-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <h3 class="text-xl font-bold text-gray-800">Zetmen</h3>
+                <p class="text-gray-600 mt-2">
+                  Jin Kanzaki becomes ZET to fight monstrous humans called
+                  players.
+                </p>
+              </div>
+            </div>
+
+            <!-- Poster 6 -->
+            <div class="group">
+              <div class="relative overflow-hidden rounded-xl mb-4">
+                <img
+                  src="https://i.pinimg.com/736x/a9/d7/56/a9d7564f871a1879a88a62cf04ce6cb4.jpg"
+                  alt="poster 6"
+                  class="w-full aspect-[3/4] object-cover object-center transform group-hover:scale-105 transition duration-300 ease-in-out"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6"
+                >
+                  <div class="flex space-x-4">
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fas fa-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <h3 class="text-xl font-bold text-gray-800">Psycho-Pass</h3>
+                <p class="text-gray-600 mt-2">
+                  Enforcers use the Sibyl System to maintain order in society.
+                </p>
+              </div>
+            </div>
+
+            <!-- Poster 7 -->
+            <div class="group">
+              <div class="relative overflow-hidden rounded-xl mb-4">
+                <img
+                  src="https://i.pinimg.com/736x/31/52/7f/31527f47aba901ff1f9f40bfe71c47cf.jpg"
+                  alt="poster 7"
+                  class="w-full aspect-[3/4] object-cover object-center transform group-hover:scale-105 transition duration-300 ease-in-out"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6"
+                >
+                  <div class="flex space-x-4">
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fas fa-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <h3 class="text-xl font-bold text-gray-800">Hyouka</h3>
+                <p class="text-gray-600 mt-2">
+                  Oreki Houtarou, a curious high school student, solves
+                  mysteries with his friends.
+                </p>
+              </div>
+            </div>
+
+            <!-- Poster 8 -->
+            <div class="group">
+              <div class="relative overflow-hidden rounded-xl mb-4">
+                <img
+                  src="https://i.pinimg.com/1200x/3e/99/92/3e999264bdf61b1f1e06972a9757605b.jpg"
+                  alt="poster 8"
+                  class="w-full aspect-[3/4] object-cover object-center transform group-hover:scale-105 transition duration-300 ease-in-out"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6"
+                >
+                  <div class="flex space-x-4">
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
+                    >
+                      <i class="fas fa-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <h3 class="text-xl font-bold text-gray-800">Tokyo Revengers</h3>
+                <p class="text-gray-600 mt-2">
+                  Takemichi travels back in time to save his friends and change
+                  the future.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA (reduced spacing) -->
+          <div class="mt-12 text-center">
+            <div
+              class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 p-px rounded-lg"
+            >
+              <a
+                href="#"
+                class="block bg-white hover:bg-gray-50 transition rounded-lg px-8 py-3 font-medium text-indigo-600"
+              >
+                View more →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scripts -->
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                brand: "#ff0000",
+              },
+            },
+          },
+        };
+      </script>
+      <script src="https://cdn.tailwindcss.com"></script>
+    </body>
+
+  <!-- Footer -->
+  <footer class="mt-16 border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div>
+          <div class="font-display text-lg">Anime Film</div>
+          <p class="mt-2 text-sm text-white/70">Explore anime galleries, season charts, and in-depth character profiles. Your next obsession starts here</p>
+        </div>
+        <div>
+          <div class="text-sm font-semibold">Explore</div>
+          <ul class="mt-2 space-y-2 text-sm text-white/70">
+            <li><a href="#" class="hover:text-white">Feature Films</a></li>
+            <li><a href="#" class="hover:text-white">More Projects</a></li>
+            <li><a href="#" class="hover:text-white">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-sm font-semibold">Support</div>
+          <ul class="mt-2 space-y-2 text-sm text-white/70">
+            <li><a href="#" class="hover:text-white">Contact</a></li>
+            <li><a href="#" class="hover:text-white">Press</a></li>
+            <li><a href="#" class="hover:text-white">FAQs</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-sm font-semibold">Follow</div>
+          <ul class="mt-2 space-y-2 text-sm text-white/70">
+            <li><a href="#" class="hover:text-white">Facebook</a></li>
+            <li><a href="#" class="hover:text-white">YouTube</a></li>
+            <li><a href="#" class="hover:text-white">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 text-xs text-white/50">&copy; <span id="year"></span> Group2 Anime. All rights reserved.<br>Team Member : SOKNY ENAT-THERM CHANTHA-LEY SEN- MI SORAKMONY-BUN PANIN-THY MAYA</div>
+    </div>
+  </footer>
+
+  <script>
+    const currentPage = window.location.pathname.split('/').pop() || 'home.html';
+    document.querySelectorAll('nav a[href]').forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.className = 'block py-2 px-3 text-gray-800 bg-blue-500 rounded md:bg-transparent md:text-blue-600 md:p-0 hover:text-blue-500';
+      }
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  </body>
+</html>
